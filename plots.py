@@ -15,6 +15,11 @@ def run_task2():
     large()
     plt.show()
 
+def run_task3():
+    values = path()
+    plt.plot(values[0], values[1], 'ro--')
+    plt.show()
+
 def small():
     x = [3,3,4,4,3]
     y = [3,4,4,3,3]
@@ -30,9 +35,27 @@ def large():
     y = [1, 6, 6, 1, 1]
     plt.plot(x,y,'bp-')
 
+def coordinate():
+    x = int(input("Enter x value:\n"))
+    y = int(input("Enter y Value:\n"))
+    return(x,y)
+
+def path():
+    print("Retrieving path..")
+    x_values = []
+    y_values = []
+
+    for count in range(4):
+        data = coordinate()
+        x_values.append(data[0])
+        y_values.append(data[1])
+
+    return [x_values, y_values]
+
 if __name__ == "__main__":
     # run_task1()
-    run_task2()
+    # run_task2()
+    run_task3()
 
 
 # # marker styles can be specified using single characters
